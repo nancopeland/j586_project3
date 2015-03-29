@@ -1,0 +1,25 @@
+/*style*/
+
+body {
+    font-family: 'Droid Serif', serif;
+    font-size: 16px; 
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase; 
+}
+
+a {
+    color: #4591B8; 
+}
+
+.name {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #56A0D3;
+}
+
+/*red: #FF5443
+blue: #4591B8*/

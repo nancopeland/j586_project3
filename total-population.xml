@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<totalPopulation>
+  <point name="0-10">
+    <age>0-10</age>
+    <population>40521965</population>
+  </point>
+  <point name="11-20">
+    <age>11-21</age>
+    <population>41980130</population>
+  </point>
+  <point name="21-30">
+    <age>21-30</age>
+    <population>44570255</population>
+  </point>
+  <point name="31-40">
+    <age>3</age>
+    <population>40896618</population>
+  </point>
+  <point name="41-50">
+    <age>41-50</age>
+    <population>42045797</population>
+  </point>
+  <point name="51-60">
+    <age>51-60</age>
+    <population>43487346</population>
+  </point>
+  <point name="61-70">
+    <age>61-70</age>
+    <population>32287082</population>
+  </point>
+  <point name="71-80">
+    <age>71-80</age>
+    <population>17716082</population>
+  </point>
+  <point name="81-90">
+    <age>81-90</age>
+    <population>8844917</population>
+  </point>
+  <point name="91-100">
+    <age>91-100</age>
+    <population>1825941</population>
+  </point>
+  
+</totalPopulation>
