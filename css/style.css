@@ -8,18 +8,47 @@ body {
 h1 {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 700;
-    text-transform: uppercase; 
+    text-transform: uppercase;
+    font-size: 4em; 
+}
+
+h3 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2em;
 }
 
 a {
-    color: #4591B8; 
+    color: #8B9FBB;
 }
 
-.name {
-    font-weight: bold;
-    font-size: 1.25em;
-    color: #56A0D3;
+a:hover {
+    text-decoration: none;
 }
 
-/*red: #FF5443
-blue: #4591B8*/
+/*red: #FF5443 lighter red: #CA8B79 pale red: #E7D2CA
+blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 /
+
+.title {
+    text-align: center;
+    padding: 20px 0px 60px 0px;
+}
+
+
+/*millennial population*/
+.population {
+    border-top: dotted 3px;
+    border-color: #8B9FBB;
+    padding: 60px 0px 60px 0px; 
+}
+
+
+/*footer*/
+.footer {
+    text-align: right;
+    font-size: .8em;
+    font-family: 'Ubuntu', sans-serif; 
+}
+
+
