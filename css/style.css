@@ -13,10 +13,12 @@ h1 {
 }
 
 h3 {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Bitter', serif;
     font-weight: 700;
     text-transform: uppercase;
     font-size: 1.2em;
+    padding: 0px;
+    margin-top: 10px; 
 }
 
 a {
@@ -28,7 +30,7 @@ a:hover {
 }
 
 /*red: #FF5443 lighter red: #CA8B79 pale red: #E7D2CA
-blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 /
+blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 
 .title {
     text-align: center;
@@ -38,17 +40,36 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 /
 
 /*millennial population*/
 .population {
-    border-top: dotted 3px;
-    border-color: #8B9FBB;
+    border-top: solid 1px;
+    border-color: #dddddd;
     padding: 60px 0px 60px 0px; 
+}
+
+.thick-border {
+    border-top: solid 10px black;
+    width: 80px; 
+}
+
+/*diversity*/
+.diversity {
+    border-top: solid 1px;
+    border-color: #dddddd;
+    padding: 60px 0px 60px 0px;
 }
 
 
 /*footer*/
 .footer {
+    border-top: solid 1px;
+    border-color: #dddddd;
+    margin: 60px 0px 0px 0px;
+}
+
+.footer-text{
     text-align: right;
     font-size: .8em;
-    font-family: 'Ubuntu', sans-serif; 
+    font-family: 'Ubuntu', sans-serif;
+    padding: 20px 0px 20px 0px; 
 }
 
 

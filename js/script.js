@@ -50,7 +50,7 @@ $(document).ready(function(){
 function buildChart(xml){ //tells how to build chart, but need to add buildChart blah blah in document ready above
     
     var chart1 = new Highcharts.Chart({
-        colors: ['#8B9FBB, #DCE3E8'],
+        colors: ['#DCE3E8'],
         chart: {
             renderTo: 'chart',
             type: 'areaspline',
@@ -71,7 +71,7 @@ function buildChart(xml){ //tells how to build chart, but need to add buildChart
             plotBands: [{ 
                 from: .8,
                 to: 2.9,
-                color: 'rgba(202, 139, 121, .25)'
+                color: 'rgba(202, 139, 121, .3)'
             }]
         },
         yAxis: {
@@ -87,15 +87,24 @@ function buildChart(xml){ //tells how to build chart, but need to add buildChart
     })
 };
     
+
+
+
 function buildPiechart() {
-    $('#race-chart').highcharts({
+    var chart2 = new Highcharts.Chart({ 
+        colors: ['#8B9FBB', '#BFCFDA', '#C0CCD1', '#CBD5DB', '#DCE3E8', '#EAF3F7'],
         chart: {
+            renderTo: 'race-chart',
             plotBackgroundColor: null,
             plotBorderWidth: null,
-            plotShadow: false
+            plotShadow: false,
+            style: {
+                fontFamily:'"Ubuntu", sans-serif',
+                fontWeight:'300'
+            }
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: 'Diversity: Millennials'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -104,30 +113,27 @@ function buildPiechart() {
             pie: {
                 allowPointSelect: true,
                 cursor: 'pointer',
+                
                 dataLabels: {
                     enabled: true,
                     format: '<b>{point.name}</b>: {point.percentage:.1f} %',
                     style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                        fontFamily:'"Ubuntu", sans-serif',
+                        fontWeight:'300'
                     }
                 }
             }
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: 'percentage',
             data: [
-                ['Firefox',   45.0],
-                ['IE',       26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari',    8.5],
-                ['Opera',     6.2],
-                ['Others',   0.7]
+                ['White',   74.45],
+                ['Black',       14.94],
+                ['Asian American',    5.84],
+                ['American Indian',     1.47],
+                ['Native Hawaiian/Pacific Islander',   .29],
+                ['Two or more races',   3.00]
             ]
         }]
     });
