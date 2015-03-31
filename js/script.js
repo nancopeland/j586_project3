@@ -30,7 +30,7 @@ $(document).ready(function(){
     console.log(totalPopulation);
     buildChart();
     buildPiechart();
-    buildPiechart2();  
+    buildPiechart2(); 
     }
     
 });
@@ -176,7 +176,15 @@ function buildPiechart2() {
     });
 };
 
-/*$(document).ready(function(){
+
+
+var conLib = [];
+var mostLib = [];
+var mix = [];
+var mostCons = [];
+var conCons = []; 
+
+$(document).ready(function(){
     
     $.ajax({ //loads in xml file
         type: "GET",
@@ -187,54 +195,78 @@ function buildPiechart2() {
     
     function parseXML(xml) { 
          
-        $(xml).find('point').each(function(){ //starts loop to find all people, etc
-            var $point = $(this); 
-            var name = $point.attr("name");
-            totalPopulation.push(parseInt($point.find('population').text())); //parseInt is a function that says turn this text into an integer. 
-            
+        $(xml).find('generation').each(function(){ //starts loop to find all people, etc
+            var $generation = $(this); 
+            var name = $generation.attr("name");
+            conLib.push(parseInt($generation.find('con-lib').text())); //parseInt is a function that says turn this text into an integer. 
+            mostLib.push(parseInt($generation.find('most-lib').text()));
+            mix.push(parseInt($generation.find('mix').text()));
+            mostCons.push(parseInt($generation.find('most-cons').text()));
+            conCons.push(parseInt($generation.find('con-cons').text()));
         });
     
-    console.log(totalPopulation); 
+    console.log(conCons); 
     buildBargraph(); 
     }
     
-});*/
+});
 
 function buildBargraph() {
-    var chart5 = new Highcharts.Chart({ 
+    var chart5 = new Highcharts.Chart({
+        colors: ['#CA8B79', '#E7D2CA', '#C0CCD1', '#BFCFDA', '#8B9FBB'],
         chart: {
             renderTo: 'politics-graph',
-            type: 'bar'
+            type: 'bar',
+            style: {
+                fontFamily:'"Ubuntu", sans-serif',
+                fontWeight:'300'
+            }
         },
         title: {
-            text: 'Stacked bar chart'
+            text: 'U.S. Political Views by Generation'
         },
         xAxis: {
-            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+            categories: ['Total', 'Silent', 'Baby Boomers', 'Generation X', 'Millennials']
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'U.S. Political Views by Generation'
+                text: 'Percentage'
             }
         },
         legend: {
             reversed: true
         },
         plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b> {point.percentage:.1f} %',
+                    style: {
+                        fontFamily:'"Ubuntu", sans-serif',
+                        fontWeight:'300'
+                    }
+                }
+            },
             series: {
                 stacking: 'normal'
             }
         },
         series: [{
-            name: 'John',
-            data: [5, 3, 4, 7, 2]
+            name: 'Consistently Conservative',
+            data: conCons
         }, {
-            name: 'Jane',
-            data: [2, 2, 3, 2, 1]
+            name: 'Mostly Conservative',
+            data: mostCons
         }, {
-            name: 'Joe',
-            data: [3, 4, 4, 2, 5]
+            name: 'Mixed',
+            data: mix
+        }, {
+            name: 'Mostly Liberal',
+            data: mostLib
+        }, {
+            name: 'Consistently Liberal',
+            data: conLib            
         }]
     });
 };

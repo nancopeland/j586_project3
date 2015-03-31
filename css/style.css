@@ -9,7 +9,7 @@ h1 {
     font-family: 'Bitter', serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 4em;
+    font-size: 7vw;
     margin-top: 5px;
     margin-bottom: 20px; 
 }
@@ -97,6 +97,13 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
     display: inline;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300; 
+}
+
+/*politics*/
+.politics {
+    border-top: solid 1px;
+    border-color: #dddddd;
+    padding: 60px 0px 60px 0px; 
 }
 
 
