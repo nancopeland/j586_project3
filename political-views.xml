@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<politicalViews>
+  
+  <generation name="total">
+    <con-lib>12</con-lib>
+    <most-lib>22</most-lib>
+    <mix>39</mix>
+    <most-cons>18</most-cons>
+    <con-cons>9</con-cons>
+  </generation>
+  
+  <generation name="silent">
+    <con-lib>12</con-lib>
+    <most-lib>16</most-lib>
+    <mix>33</mix>
+    <most-cons>23</most-cons>
+    <con-cons>15</con-cons>
+  </generation>
+  
+  <generation name="boomer">
+    <con-lib>13</con-lib>
+    <most-lib>20</most-lib>
+    <mix>35</mix>
+    <most-cons>21</most-cons>
+    <con-cons>13</con-cons>
+  </generation>
+  
+  <generation name="generationx">
+    <con-lib>11</con-lib>
+    <most-lib>23</most-lib>
+    <mix>42</mix>
+    <most-cons>18</most-cons>
+    <con-cons>7</con-cons>
+  </generation>
+  
+  <generation name="millennial">
+    <con-lib>13</con-lib>
+    <most-lib>28</most-lib>
+    <mix>44</mix>
+    <most-cons>12</most-cons>
+    <con-cons>3</con-cons>
+  </generation>
+  
+</politicalViews>

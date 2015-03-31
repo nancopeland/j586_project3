@@ -95,7 +95,8 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 .hispanic-text {
     color: black;
     display: inline;
-    font-family: 'Ubuntu', sans-serif; 
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300; 
 }
 
 
@@ -110,6 +111,7 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
     text-align: right;
     font-size: .8em;
     font-family: 'Ubuntu', sans-serif;
+    font-weight: 300; 
     padding: 20px 0px 20px 0px; 
 }
 

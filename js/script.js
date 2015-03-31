@@ -21,28 +21,16 @@ $(document).ready(function(){
     function parseXML(xml) { 
          
         $(xml).find('point').each(function(){ //starts loop to find all people, etc
-            //console.log("once for every person");
             var $point = $(this); 
             var name = $point.attr("name");
-            //var totalPopulation = $data.find('population').text();
-            //var imageurl = $data.attr('imageurl');
-            totalPopulation.push(parseInt($point.find('population').text())); //parseInt is a function that says turn this text into an integer. Push adds the data to the back of each one so that order makes sense. Pop goes to the front.
-    
-            /*var html = '<dt> <img class="bioImage" alt="" src="' + imageurl + '" /> </dt>';
-            //html += '<dd> <span class="loadingPic" alt="Loading" />';
-            html += '<p class="name">' + name + '</p>';
-            html += '<p> ' + totalPopulation + '</p>' ;
-            html += '</dd>';*/
-    
-            /*$('dl').append($(html));*/
-            
+            totalPopulation.push(parseInt($point.find('population').text())); //parseInt is a function that says turn this text into an integer. 
             
         });
     
     console.log(totalPopulation);
     buildChart();
     buildPiechart();
-    buildPiechart2(); //finally builds chart -- needs to be inside function but outside loop so it won't try to write the chart 100 times, etc.
+    buildPiechart2();  
     }
     
 });
@@ -184,6 +172,69 @@ function buildPiechart2() {
                 ['Native Hawaiian/Pacific Islander',   .23],
                 ['Two or more races',   2.50]
             ]
+        }]
+    });
+};
+
+/*$(document).ready(function(){
+    
+    $.ajax({ //loads in xml file
+        type: "GET",
+        url: "political-views.xml",
+        dataType: "xml",
+        success: parseXML
+    });
+    
+    function parseXML(xml) { 
+         
+        $(xml).find('point').each(function(){ //starts loop to find all people, etc
+            var $point = $(this); 
+            var name = $point.attr("name");
+            totalPopulation.push(parseInt($point.find('population').text())); //parseInt is a function that says turn this text into an integer. 
+            
+        });
+    
+    console.log(totalPopulation); 
+    buildBargraph(); 
+    }
+    
+});*/
+
+function buildBargraph() {
+    var chart5 = new Highcharts.Chart({ 
+        chart: {
+            renderTo: 'politics-graph',
+            type: 'bar'
+        },
+        title: {
+            text: 'Stacked bar chart'
+        },
+        xAxis: {
+            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'U.S. Political Views by Generation'
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        plotOptions: {
+            series: {
+                stacking: 'normal'
+            }
+        },
+        series: [{
+            name: 'John',
+            data: [5, 3, 4, 7, 2]
+        }, {
+            name: 'Jane',
+            data: [2, 2, 3, 2, 1]
+        }, {
+            name: 'Joe',
+            data: [3, 4, 4, 2, 5]
         }]
     });
 };
