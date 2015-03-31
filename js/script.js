@@ -41,7 +41,8 @@ $(document).ready(function(){
     
     console.log(totalPopulation);
     buildChart();
-    buildPiechart();//finally builds chart -- needs to be inside function but outside loop so it won't try to write the chart 100 times, etc.
+    buildPiechart();
+    buildPiechart2(); //finally builds chart -- needs to be inside function but outside loop so it won't try to write the chart 100 times, etc.
     }
     
 });
@@ -71,7 +72,7 @@ function buildChart(xml){ //tells how to build chart, but need to add buildChart
             plotBands: [{ 
                 from: .8,
                 to: 2.9,
-                color: 'rgba(202, 139, 121, .3)'
+                color: 'rgba(139, 159, 187, .5)'
             }]
         },
         yAxis: {
@@ -87,8 +88,6 @@ function buildChart(xml){ //tells how to build chart, but need to add buildChart
     })
 };
     
-
-
 
 function buildPiechart() {
     var chart2 = new Highcharts.Chart({ 
@@ -134,6 +133,56 @@ function buildPiechart() {
                 ['American Indian',     1.47],
                 ['Native Hawaiian/Pacific Islander',   .29],
                 ['Two or more races',   3.00]
+            ]
+        }]
+    });
+};
+
+
+function buildPiechart2() {
+    var chart3 = new Highcharts.Chart({ 
+        colors: ['#8B9FBB', '#BFCFDA', '#C0CCD1', '#CBD5DB', '#DCE3E8', '#EAF3F7'],
+        chart: {
+            renderTo: 'race-chart-two',
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            style: {
+                fontFamily:'"Ubuntu", sans-serif',
+                fontWeight:'300'
+            }
+        },
+        title: {
+            text: 'Diversity: Total Population'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        fontFamily:'"Ubuntu", sans-serif',
+                        fontWeight:'300'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'percentage',
+            data: [
+                ['White',   77.46],
+                ['Black',       13.20],
+                ['Asian American',    5.36],
+                ['American Indian',     1.24],
+                ['Native Hawaiian/Pacific Islander',   .23],
+                ['Two or more races',   2.50]
             ]
         }]
     });
