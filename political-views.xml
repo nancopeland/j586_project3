@@ -8,6 +8,9 @@
     <mix>39</mix>
     <most-cons>18</most-cons>
     <con-cons>9</con-cons>
+    <homosexuality>49</homosexuality>
+    <immigration>44</immigration>
+    <environment>37</environment>
   </generation>
   
   <generation name="silent">
@@ -16,6 +19,9 @@
     <mix>33</mix>
     <most-cons>23</most-cons>
     <con-cons>15</con-cons>
+    <homosexuality>31</homosexuality>
+    <immigration>38</immigration>
+    <environment>29</environment>
   </generation>
   
   <generation name="boomer">
@@ -24,6 +30,9 @@
     <mix>35</mix>
     <most-cons>21</most-cons>
     <con-cons>13</con-cons>
+    <homosexuality>45</homosexuality>
+    <immigration>39</immigration>
+    <environment>31</environment>
   </generation>
   
   <generation name="generationx">
@@ -32,6 +41,9 @@
     <mix>42</mix>
     <most-cons>18</most-cons>
     <con-cons>7</con-cons>
+    <homosexuality>51</homosexuality>
+    <immigration>44</immigration>
+    <environment>40</environment>
   </generation>
   
   <generation name="millennial">
@@ -40,6 +52,11 @@
     <mix>44</mix>
     <most-cons>12</most-cons>
     <con-cons>3</con-cons>
+    <homosexuality>64</homosexuality>
+    <immigration>57</immigration>
+    <environment>48</environment>
   </generation>
   
 </politicalViews>
+
+

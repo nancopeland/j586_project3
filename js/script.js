@@ -58,7 +58,7 @@ function buildChart(xml){ //tells how to build chart, but need to add buildChart
             categories:
                 ['0-10 years old', '11-20 years old', '21-30 years old', '31-40 years old', '41-50 years old', '51-60 years old', '61-70 years old', '71-80 years old', '81-90 years old', '91-100 years old'],
             plotBands: [{ 
-                from: .8,
+                from: .8, 
                 to: 2.9,
                 color: 'rgba(139, 159, 187, .5)'
             }]
@@ -212,7 +212,7 @@ $(document).ready(function(){
 });
 
 function buildBargraph() {
-    var chart5 = new Highcharts.Chart({
+    var chart4 = new Highcharts.Chart({
         colors: ['#CA8B79', '#E7D2CA', '#C0CCD1', '#BFCFDA', '#8B9FBB'],
         chart: {
             renderTo: 'politics-graph',
