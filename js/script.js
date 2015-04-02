@@ -271,4 +271,14 @@ function buildBargraph() {
     });
 };
 
+
+
+$(document).ready(function() {
+    
+  $('#table').dataTable( {
+        "ajax": 'table.json'
+    } );  
+   
+} );
+
     
