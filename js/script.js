@@ -100,15 +100,10 @@ function buildPiechart() {
             pie: {
                 allowPointSelect: true,
                 cursor: 'pointer',
-                
                 dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        fontFamily:'"Ubuntu", sans-serif',
-                        fontWeight:'300'
-                    }
-                }
+                    enabled: false
+                },
+                showInLegend: true
             }
         },
         series: [{
@@ -150,15 +145,10 @@ function buildPiechart2() {
             pie: {
                 allowPointSelect: true,
                 cursor: 'pointer',
-                
                 dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        fontFamily:'"Ubuntu", sans-serif',
-                        fontWeight:'300'
-                    }
-                }
+                    enabled: false
+                },
+                showInLegend: true
             }
         },
         series: [{
@@ -276,7 +266,8 @@ function buildBargraph() {
 $(document).ready(function() {
     
   $('#table').dataTable( {
-        "ajax": 'table.json'
+        "ajax": 'table.json', 
+        responsive: true
     } );  
    
 } );

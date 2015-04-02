@@ -82,7 +82,8 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 
 .hispanic {
     text-align: center;
-    padding: 10px 0px 50px 0px; 
+    padding: 10px 0px 50px 0px;
+    margin-bottom: 40px; 
 }
 
 .hispanic-number {
@@ -98,13 +99,23 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
     font-weight: 300; 
 }
 
+/*table*/
+table {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+}
+
+table.dataTable.dtr-inline.collapsed tbody td:first-child:before,
+table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
+    background-color: #8B9FBB; 
+}
+
 /*politics*/
 .politics {
     border-top: solid 1px;
     border-color: #dddddd;
     padding: 60px 0px 60px 0px; 
 }
-
 
 /*footer*/
 .footer {

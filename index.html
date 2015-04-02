@@ -8,14 +8,16 @@
     
     <link href="css/images/favicon.png" rel="icon" type="image/png"/>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
-    <link href="css/style.css" rel="stylesheet"/>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700|Ubuntu:300,500|Bitter:700' rel='stylesheet' type='text/css'/>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css"/>
+    <link href="css/style.css" rel="stylesheet"/>
         
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
     <script src="http://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript" charset="utf8" src="js/dataTables.js"></script>
+    <script src="js/dataTables_responsive.js"></script>
     <script src="js/script.js"></script>
 </head>
 
@@ -27,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <div class="container col-md-8 col-md-offset-2">
         <div class="row title">
           <div class="col-md-12 col-sm-12 col-xs-12">
             <a href="https://www.facebook.com/nan.copeland.3"><i class="fa fa-facebook"></i></a>
@@ -51,33 +53,56 @@
         
         <!--diversity-->
         <div class="row diversity">
-            <div class="hidden-md hidden-lg col-sm-12 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="thick-border"></div>
                 <h3>Diversity</h3>
                 <p>something prolific about how millennials are super diverse compared to other generations</p>
             </div>
-            <div class="col-md-8 col-sm-12 col-xs-12">
-                <div class="row">
-                    <div class="col-md-12 hispanic">
-                        <div id="race-chart" ></div>
-                        <h3 class="hispanic-number">21%</h3>
-                        <p class="hispanic-text">of Millennials are Hispanic</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 hispanic">
-                        <div id="race-chart-two" ></div>
-                        <h3 class="hispanic-number">17%</h3>
-                        <p class="hispanic-text">of the U.S. Population is Hispanic</p>
-                    </div>
-                </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 hispanic">
+                <div id="race-chart" ></div>
+                <h3 class="hispanic-number">21%</h3>
+                <p class="hispanic-text">of Millennials are Hispanic</p>
             </div>
-            <div class="col-md-4 hidden-sm hidden-xs">
-                <div class="thick-border"></div>
-                <h3>Diversity</h3>
-                <p>something prolific about how millennials are super diverse compared to other generations</p>
+            <div class="col-md-6 col-sm-12 col-xs-12 hispanic">
+                <div id="race-chart-two" ></div>
+                <h3 class="hispanic-number">17%</h3>
+                <p class="hispanic-text">of the U.S. Population is Hispanic</p>
+            </div>
+            <!--data table-->
+            <div class="row race-table">
+                <table id="table" class="display" cellspacing="0" width="100%">
+                    <thead>
+                        <tr>
+                            <th>Age</th>
+                            <th>Total Population</th>
+                            <th>Generation</th>
+                            <th>White</th>
+                            <th>Black</th>
+                            <th>Native American</th>
+                            <th>Asian American</th>
+                            <th>Pacific Islander</th>
+                            <th>Two or more races</th>
+                            <th>Hispanic</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>Age</th>
+                            <th>Total Population</th>
+                            <th>Generation</th>
+                            <th>White</th>
+                            <th>Black</th>
+                            <th>Native American</th>
+                            <th>Asian American</th>
+                            <th>Pacific Islander</th>
+                            <th>Two or more races</th>
+                            <th>Hispanic</th>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </div>
+        
         
         <!--politics-->
         <div class="row politics">
@@ -89,38 +114,6 @@
             <div class="col-md-8 col-sm-12 col-xs-12">
                 <div id="politics-graph"></div>
             </div>
-        </div>
-        
-        <!--data table-->
-        <div class="row">
-            <table id="table" class="display" cellspacing="0" width="100%">
-                <thead>
-                    <tr>
-                        <th>Age</th>
-                        <th>Total Population</th>
-                        <th>White</th>
-                        <th>Black</th>
-                        <th>American Indian/Alaskan</th>
-                        <th>Asian American</th>
-                        <th>Hawaiian/Pacific Islander</th>
-                        <th>Two or more races</th>
-                        <th>Hispanic</th>
-                    </tr>
-                </thead>
-                <tfoot>
-                    <tr>
-                        <th>Age</th>
-                        <th>Total Population</th>
-                        <th>White</th>
-                        <th>Black</th>
-                        <th>American Indian/Alaskan</th>
-                        <th>Asian American</th>
-                        <th>Hawaiian/Pacific Islander</th>
-                        <th>Two or more races</th>
-                        <th>Hispanic</th>
-                    </tr>
-                </tfoot>
-            </table>
         </div>
         
         <!--footer-->
