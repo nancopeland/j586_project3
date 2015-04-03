@@ -145,8 +145,9 @@ table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
 
 /*footer*/
 .footer {
-    background-color: #000000; 
-    color: #FFFFFF; 
+    border-top: solid 1px;
+    border-color: #dddddd;
+    margin-top: 60px;
 }
 
 .footer-credits {
@@ -157,8 +158,7 @@ table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
     padding: 20px 0px 20px 0px; 
 }
 
-.footer-credits>a {
-    color: #FFFFFF; 
-}
+
+
 
 
