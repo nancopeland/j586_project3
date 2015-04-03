@@ -172,7 +172,10 @@ var conLib = [];
 var mostLib = [];
 var mix = [];
 var mostCons = [];
-var conCons = []; 
+var conCons = [];
+var homosexuality = [];
+var immigration = [];
+var environment = []; 
 
 $(document).ready(function(){
     
@@ -193,10 +196,15 @@ $(document).ready(function(){
             mix.push(parseInt($generation.find('mix').text()));
             mostCons.push(parseInt($generation.find('most-cons').text()));
             conCons.push(parseInt($generation.find('con-cons').text()));
+            homosexuality.push(parseInt($generation.find('homosexuality').text()));
+            immigration.push(parseInt($generation.find('immigration').text()));
+            environment.push(parseInt($generation.find('environment').text()));
         });
     
-    console.log(conCons); 
-    buildBargraph(); 
+    console.log(conCons);
+    console.log(environment); 
+    buildBargraph();
+    buildBargraphTwo(); 
     }
     
 });
@@ -221,7 +229,7 @@ function buildBargraph() {
         yAxis: {
             min: 0,
             title: {
-                text: 'Percentage'
+                text: 'Percentage (%)'
             }
         },
         legend: {
@@ -257,6 +265,66 @@ function buildBargraph() {
         }, {
             name: 'Consistently Liberal',
             data: conLib            
+        }]
+    });
+};
+
+function buildBargraphTwo() {
+    var chart5 = new Highcharts.Chart({
+        colors: ['#8B9FBB', '#BFCFDA', '#C0CCD1'],
+        chart: {
+            renderTo: 'politics-graph-two',
+            type: 'bar',
+            style: {
+                fontFamily:'"Ubuntu", sans-serif',
+                fontWeight:'300'
+            }
+        },
+        title: {
+            text: 'Republican Support for Liberal Issues by Generation'
+        },
+        xAxis: {
+            categories: ['All Republicans/<br>Republican Leaning', 'Silent', 'Baby Boomers', 'Generation X', 'Millennials'],
+            title: {
+                text: null
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Percentage that supports issue (%)',
+                align: 'high'
+            },
+            labels: {
+                overflow: 'justify'
+            }
+        },
+        plotOptions: {
+            bar: {
+                dataLabels: {
+                    enabled: true,
+                    style: {
+                        fontFamily:'"Ubuntu", sans-serif',
+                        fontWeight:'300'
+                    }
+                }
+            }
+        },
+        legend: {
+            reversed: true
+        },
+        credits: {
+            enabled: false
+        },
+        series: [{
+            name: 'Homosexuality should be accepted by society',
+            data: homosexuality
+        }, {
+            name: 'Immigrants strengthen our country',
+            data: immigration
+        }, {
+            name: 'Environmental regulations are worth the cost',
+            data: environment
         }]
     });
 };

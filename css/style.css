@@ -10,7 +10,8 @@ h1 {
     font-weight: 700;
     font-size: 7vw;
     margin-top: 5px;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    color: #000000; 
 }
 
 h3 {
@@ -42,14 +43,34 @@ i:hover {
 /*red: #FF5443 lighter red: #CA8B79 pale red: #E7D2CA
 blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 
-.navigation {
-    background-color: #000000; 
+/*navigation*/
+.navbar {
+    border-radius: 0px; 
 }
 
-.latimes {
-    padding-left: 50px; 
+.navbar-inverse {
+    background-color: #000000;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: .7em;
 }
 
+.navbar-inverse .navbar-nav>li>a {
+    color: #FFFFFF;
+    padding: 15px 10px 15px 10px; 
+}
+
+.navbar-inverse .navbar-nav>li>a:hover {
+    background-color: #4591B8;
+}
+
+.navbar-brand {
+    padding-top: 10px; 
+}
+
+
+/*title*/
 .title {
     padding: 20px 0px 40px 0px;
 }
@@ -82,7 +103,7 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 
 .hispanic {
     text-align: center;
-    padding: 10px 0px 50px 0px;
+    padding: 80px 0px 80px 0px;
     margin-bottom: 40px; 
 }
 
@@ -114,14 +135,18 @@ table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
 .politics {
     border-top: solid 1px;
     border-color: #dddddd;
-    padding: 60px 0px 60px 0px; 
+    padding: 60px 15px 60px 15px; 
+
+}
+
+.politics-issues {
+    padding-top: 60px; 
 }
 
 /*footer*/
 .footer {
-    border-top: solid 1px;
-    border-color: #dddddd;
-    margin: 60px 0px 0px 0px;
+    background-color: #000000; 
+    color: #FFFFFF; 
 }
 
 .footer-credits {
@@ -130,6 +155,10 @@ table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300; 
     padding: 20px 0px 20px 0px; 
+}
+
+.footer-credits>a {
+    color: #FFFFFF; 
 }
 
 
