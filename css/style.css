@@ -9,7 +9,7 @@ body {
 h1 {
     font-family: 'Bitter', serif;
     font-weight: 700;
-    font-size: 7vw;
+    font-size: 3.25em;
     margin-top: 5px;
     margin-bottom: 20px; 
 }
@@ -20,11 +20,17 @@ h3 {
     text-transform: uppercase;
     font-size: 1.3em;
     padding: 0px;
-    margin-top: 10px; 
+    margin-top: 10px;
+    color: #333333;
+}
+
+h6 {
+    font-size: 1.15em;
+    line-height: 1.4em; 
 }
 
 a {
-    color: #FF5443;
+    color: #F59D00;
 }
 
 a:hover {
@@ -37,11 +43,8 @@ i {
 }
 
 i:hover {
-    color: #FF5443; 
+    color: #F59D00; 
 }
-
-/*red: #FF5443 lighter red: #CA8B79 pale red: #E7D2CA
-blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 
 /*navigation*/
 .navbar {
@@ -77,7 +80,7 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 
 .byline {
     text-transform: uppercase;
-    font-size: .8em;
+    font-size: .85em;
     font-weight: 700; 
 }
 
@@ -92,11 +95,6 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 .population p {
     padding-top: 15px; 
 }
-
-/*.thick-border {
-    border-top: solid 10px #333333; ;
-    width: 80px; 
-}*/
 
 .icon {
     width: 60px;
@@ -119,10 +117,14 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
     padding: 60px 0px 60px 0px;
 }
 
+.diversity p {
+    padding-top: 15px; 
+}
+
 .hispanic {
     text-align: center;
-    padding: 80px 0px 80px 0px;
-    margin-bottom: 40px; 
+    padding: 80px 0px 100px 0px;
+ 
 }
 
 .hispanic-number {
@@ -136,6 +138,10 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
     display: inline;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300; 
+}
+
+#race-chart, #race-chart-two {
+    margin-top: 60px; 
 }
 
 /*table*/
@@ -155,6 +161,10 @@ table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
     border-color: #dddddd;
     padding: 60px 15px 60px 15px; 
 
+}
+
+.politics p {
+    padding-top: 15px; 
 }
 
 .politics-issues {

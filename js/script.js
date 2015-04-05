@@ -7,6 +7,14 @@
 //build table
 
 var totalPopulation = [];
+var conLib = [];
+var mostLib = [];
+var mix = [];
+var mostCons = [];
+var conCons = [];
+var homosexuality = [];
+var immigration = [];
+var environment = []; 
     
     
 $(document).ready(function(){
@@ -14,6 +22,13 @@ $(document).ready(function(){
     $.ajax({ //loads in xml file
         type: "GET",
         url: "total-population.xml",
+        dataType: "xml",
+        success: parseXML
+    });
+    
+    $.ajax({ //loads in xml file
+        type: "GET",
+        url: "political-views.xml",
         dataType: "xml",
         success: parseXML
     });
@@ -26,11 +41,25 @@ $(document).ready(function(){
             totalPopulation.push(parseInt($point.find('population').text())); //parseInt is a function that says turn this text into an integer. 
             
         });
+         
+        $(xml).find('generation').each(function(){ //starts loop to find all people, etc
+            var $generation = $(this); 
+            var name = $generation.attr("name");
+            conLib.push(parseInt($generation.find('con-lib').text())); //parseInt is a function that says turn this text into an integer. 
+            mostLib.push(parseInt($generation.find('most-lib').text()));
+            mix.push(parseInt($generation.find('mix').text()));
+            mostCons.push(parseInt($generation.find('most-cons').text()));
+            conCons.push(parseInt($generation.find('con-cons').text()));
+            homosexuality.push(parseInt($generation.find('homosexuality').text()));
+            immigration.push(parseInt($generation.find('immigration').text()));
+            environment.push(parseInt($generation.find('environment').text()));
+    });
     
-    console.log(totalPopulation);
     buildChart();
     buildPiechart();
-    buildPiechart2(); 
+    buildPiechart2();
+    buildBargraph();
+    buildBargraphTwo(); 
     }
     
 });
@@ -39,7 +68,7 @@ $(document).ready(function(){
 function buildChart(xml){ //tells how to build chart, but need to add buildChart blah blah in document ready above
     
     var chart1 = new Highcharts.Chart({
-        colors: ['#E5DDED'],
+        colors: ['#BCADD0'],
         chart: {
             renderTo: 'chart',
             type: 'areaspline',
@@ -79,7 +108,7 @@ function buildChart(xml){ //tells how to build chart, but need to add buildChart
 
 function buildPiechart() {
     var chart2 = new Highcharts.Chart({ 
-        colors: ['#544987', '#8D76AE', '#BCADD0', '#E5DDED', '#F6BA4F', '#FADA85'],
+        colors: ['#8D76AE', '#BCADD0', '#E5DDED', '#F6BA4F', '#FADA85', '#F8E6BA'],
         chart: {
             renderTo: 'race-chart',
             plotBackgroundColor: null,
@@ -124,7 +153,7 @@ function buildPiechart() {
 
 function buildPiechart2() {
     var chart3 = new Highcharts.Chart({ 
-        colors: ['#544987', '#8D76AE', '#BCADD0', '#E5DDED', '#F6BA4F', '#FADA85'],
+        colors: ['#8D76AE', '#BCADD0', '#E5DDED', '#F6BA4F', '#FADA85', '#F8E6BA'],
         chart: {
             renderTo: 'race-chart-two',
             plotBackgroundColor: null,
@@ -167,51 +196,19 @@ function buildPiechart2() {
 };
 
 
+$(document).ready(function() {
+    
+  $('#table').dataTable( {
+        "ajax": 'table.json', 
+        responsive: true
+    } );  
+   
+} );
 
-var conLib = [];
-var mostLib = [];
-var mix = [];
-var mostCons = [];
-var conCons = [];
-var homosexuality = [];
-var immigration = [];
-var environment = []; 
-
-$(document).ready(function(){
-    
-    $.ajax({ //loads in xml file
-        type: "GET",
-        url: "political-views.xml",
-        dataType: "xml",
-        success: parseXML
-    });
-    
-    function parseXML(xml) { 
-         
-        $(xml).find('generation').each(function(){ //starts loop to find all people, etc
-            var $generation = $(this); 
-            var name = $generation.attr("name");
-            conLib.push(parseInt($generation.find('con-lib').text())); //parseInt is a function that says turn this text into an integer. 
-            mostLib.push(parseInt($generation.find('most-lib').text()));
-            mix.push(parseInt($generation.find('mix').text()));
-            mostCons.push(parseInt($generation.find('most-cons').text()));
-            conCons.push(parseInt($generation.find('con-cons').text()));
-            homosexuality.push(parseInt($generation.find('homosexuality').text()));
-            immigration.push(parseInt($generation.find('immigration').text()));
-            environment.push(parseInt($generation.find('environment').text()));
-        });
-    
-    console.log(conCons);
-    console.log(environment); 
-    buildBargraph();
-    buildBargraphTwo(); 
-    }
-    
-});
 
 function buildBargraph() {
     var chart4 = new Highcharts.Chart({
-        colors: ['#F6BA4F', '#FADA85', '#E5DDED', '#BCADD0', '#544987'],
+        colors: ['#F6BA4F', '#FADA85', '#E5DDED', '#BCADD0', '#8D76AE'],
         chart: {
             renderTo: 'politics-graph',
             type: 'bar',
@@ -271,7 +268,7 @@ function buildBargraph() {
 
 function buildBargraphTwo() {
     var chart5 = new Highcharts.Chart({
-        colors: ['#544987',  '#BCADD0', '#E5DDED', '#F6BA4F', '#FADA85'],
+        colors: ['#E5DDED', '#BCADD0', '#8D76AE'],
         chart: {
             renderTo: 'politics-graph-two',
             type: 'bar',
@@ -329,15 +326,5 @@ function buildBargraphTwo() {
     });
 };
 
-
-
-$(document).ready(function() {
-    
-  $('#table').dataTable( {
-        "ajax": 'table.json', 
-        responsive: true
-    } );  
-   
-} );
 
     
