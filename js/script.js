@@ -39,7 +39,7 @@ $(document).ready(function(){
 function buildChart(xml){ //tells how to build chart, but need to add buildChart blah blah in document ready above
     
     var chart1 = new Highcharts.Chart({
-        colors: ['#DCE3E8'],
+        colors: ['#E5DDED'],
         chart: {
             renderTo: 'chart',
             type: 'areaspline',
@@ -60,7 +60,7 @@ function buildChart(xml){ //tells how to build chart, but need to add buildChart
             plotBands: [{ 
                 from: .8, 
                 to: 2.9,
-                color: 'rgba(139, 159, 187, .5)'
+                color: 'rgba(246, 186, 79, .5)'
             }]
         },
         yAxis: {
@@ -79,7 +79,7 @@ function buildChart(xml){ //tells how to build chart, but need to add buildChart
 
 function buildPiechart() {
     var chart2 = new Highcharts.Chart({ 
-        colors: ['#8B9FBB', '#BFCFDA', '#C0CCD1', '#CBD5DB', '#DCE3E8', '#EAF3F7'],
+        colors: ['#544987', '#8D76AE', '#BCADD0', '#E5DDED', '#F6BA4F', '#FADA85'],
         chart: {
             renderTo: 'race-chart',
             plotBackgroundColor: null,
@@ -124,7 +124,7 @@ function buildPiechart() {
 
 function buildPiechart2() {
     var chart3 = new Highcharts.Chart({ 
-        colors: ['#8B9FBB', '#BFCFDA', '#C0CCD1', '#CBD5DB', '#DCE3E8', '#EAF3F7'],
+        colors: ['#544987', '#8D76AE', '#BCADD0', '#E5DDED', '#F6BA4F', '#FADA85'],
         chart: {
             renderTo: 'race-chart-two',
             plotBackgroundColor: null,
@@ -211,7 +211,7 @@ $(document).ready(function(){
 
 function buildBargraph() {
     var chart4 = new Highcharts.Chart({
-        colors: ['#CA8B79', '#E7D2CA', '#C0CCD1', '#BFCFDA', '#8B9FBB'],
+        colors: ['#F6BA4F', '#FADA85', '#E5DDED', '#BCADD0', '#544987'],
         chart: {
             renderTo: 'politics-graph',
             type: 'bar',
@@ -271,7 +271,7 @@ function buildBargraph() {
 
 function buildBargraphTwo() {
     var chart5 = new Highcharts.Chart({
-        colors: ['#8B9FBB', '#BFCFDA', '#C0CCD1'],
+        colors: ['#544987',  '#BCADD0', '#E5DDED', '#F6BA4F', '#FADA85'],
         chart: {
             renderTo: 'politics-graph-two',
             type: 'bar',

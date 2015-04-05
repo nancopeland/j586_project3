@@ -2,7 +2,8 @@
 
 body {
     font-family: 'Droid Serif', serif;
-    font-size: 16px; 
+    font-size: 16px;
+    color: #333333; 
 }
 
 h1 {
@@ -10,15 +11,14 @@ h1 {
     font-weight: 700;
     font-size: 7vw;
     margin-top: 5px;
-    margin-bottom: 20px;
-    color: #000000; 
+    margin-bottom: 20px; 
 }
 
 h3 {
     font-family: 'Bitter', serif;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding: 0px;
     margin-top: 10px; 
 }
@@ -33,7 +33,7 @@ a:hover {
 
 i {
     padding: 0px 5px 0px 5px;
-    color: #000000; 
+    color: #333333; 
 }
 
 i:hover {
@@ -89,10 +89,28 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
     padding: 60px 0px 60px 0px; 
 }
 
-.thick-border {
-    border-top: solid 10px black;
-    width: 80px; 
+.population p {
+    padding-top: 15px; 
 }
+
+/*.thick-border {
+    border-top: solid 10px #333333; ;
+    width: 80px; 
+}*/
+
+.icon {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px; 
+}
+
+.subtitles {
+    display: inline-block;
+    vertical-align: middle; 
+}
+
 
 /*diversity*/
 .diversity {
@@ -108,7 +126,7 @@ blue: #4591B8* lighter blue: #8B9FBB pale blue: #DCE3E8 */
 }
 
 .hispanic-number {
-    color: #FF5443;
+    color: #F59D00;
     display: inline;
     font-size: 2em; 
 }
@@ -128,7 +146,7 @@ table {
 
 table.dataTable.dtr-inline.collapsed tbody td:first-child:before,
 table.dataTable.dtr-inline.collapsed tbody th:first-child:before {
-    background-color: #8B9FBB; 
+    background-color: #BCADD0; 
 }
 
 /*politics*/
